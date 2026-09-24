@@ -56,7 +56,105 @@ const episodes = [
       <p>Eventually the wind died. The blades stopped. The civilian folded his paper, put it in his pocket, and walked home.</p>
       <p>The windmills were still there the next morning. They had never moved at all.</p>
     `
+  }  },
+
+  {
+    title: "The Windmills Laugh",
+    date: "01.10.2026",
+    svg: `
+      <svg class="panel" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="800" height="500" fill="#ffffff"/>
+        <line x1="0" y1="440" x2="800" y2="440" stroke="#0a0a0a" stroke-width="3"/>
+
+        <!-- WINDMILL 1: laughing, tilted blades -->
+        <g stroke="#0a0a0a" stroke-width="3" fill="none">
+          <polygon points="120,440 160,440 150,240 130,240" fill="#ffffff"/>
+          <circle cx="140" cy="240" r="8" fill="#0a0a0a"/>
+          <line x1="140" y1="240" x2="140" y2="140"/>
+          <line x1="140" y1="240" x2="240" y2="260"/>
+          <line x1="140" y1="240" x2="130" y2="340"/>
+          <line x1="140" y1="240" x2="40" y2="220"/>
+          <!-- laughing mouth -->
+          <path d="M 125 300 Q 140 320 155 300" stroke-width="3"/>
+          <circle cx="130" cy="280" r="3" fill="#0a0a0a"/>
+          <circle cx="150" cy="280" r="3" fill="#0a0a0a"/>
+          <rect x="115" y="380" width="50" height="20" fill="#ffffff"/>
+          <text x="140" y="394" font-family="Courier New, monospace" font-size="10" text-anchor="middle" fill="#0a0a0a">UNIT-01</text>
+        </g>
+
+        <!-- WINDMILL 2: laughing, tilted blades -->
+        <g stroke="#0a0a0a" stroke-width="3" fill="none">
+          <polygon points="560,440 600,440 590,240 570,240" fill="#ffffff"/>
+          <circle cx="580" cy="240" r="8" fill="#0a0a0a"/>
+          <line x1="580" y1="240" x2="580" y2="140"/>
+          <line x1="580" y1="240" x2="680" y2="260"/>
+          <line x1="580" y1="240" x2="570" y2="340"/>
+          <line x1="580" y1="240" x2="480" y2="220"/>
+          <path d="M 565 300 Q 580 320 595 300" stroke-width="3"/>
+          <circle cx="570" cy="280" r="3" fill="#0a0a0a"/>
+          <circle cx="590" cy="280" r="3" fill="#0a0a0a"/>
+          <rect x="555" y="380" width="50" height="20" fill="#ffffff"/>
+          <text x="580" y="394" font-family="Courier New, monospace" font-size="10" text-anchor="middle" fill="#0a0a0a">UNIT-02</text>
+        </g>
+
+        <!-- CIVILIAN: smaller, wounded, holding a paper -->
+        <g stroke="#0a0a0a" stroke-width="3" fill="none">
+          <circle cx="400" cy="350" r="12" fill="#ffffff"/>
+          <line x1="400" y1="362" x2="400" y2="410"/>
+          <line x1="400" y1="378" x2="382" y2="390"/>
+          <line x1="400" y1="378" x2="418" y2="392"/>
+          <line x1="400" y1="410" x2="388" y2="435"/>
+          <line x1="400" y1="410" x2="412" y2="435"/>
+          <!-- bandage on leg -->
+          <line x1="392" y1="420" x2="410" y2="420"/>
+          <line x1="392" y1="425" x2="410" y2="425"/>
+          <!-- paper -->
+          <rect x="416" y="382" width="20" height="24" fill="#ffffff"/>
+          <line x1="419" y1="388" x2="433" y2="388"/>
+          <line x1="419" y1="394" x2="433" y2="394"/>
+          <line x1="419" y1="400" x2="433" y2="400"/>
+        </g>
+
+        <!-- SPEECH: windmill 1 -->
+        <g>
+          <ellipse cx="160" cy="180" rx="110" ry="28" fill="#ffffff" stroke="#0a0a0a" stroke-width="3"/>
+          <polygon points="140,206 150,226 160,206" fill="#ffffff" stroke="#0a0a0a" stroke-width="3"/>
+          <text x="160" y="185" font-family="Courier New, monospace" font-size="12" text-anchor="middle" fill="#0a0a0a">It's ours. You just live here.</text>
+        </g>
+
+        <!-- SPEECH: windmill 2 -->
+        <g>
+          <ellipse cx="600" cy="180" rx="110" ry="28" fill="#ffffff" stroke="#0a0a0a" stroke-width="3"/>
+          <polygon points="580,206 590,226 600,206" fill="#ffffff" stroke="#0a0a0a" stroke-width="3"/>
+          <text x="600" y="185" font-family="Courier New, monospace" font-size="12" text-anchor="middle" fill="#0a0a0a">Look away. It's a scandal elsewhere.</text>
+        </g>
+
+        <!-- GENDARMERIE figure: turned away, hands over eyes -->
+        <g stroke="#0a0a0a" stroke-width="3" fill="none">
+          <circle cx="700" cy="380" r="12" fill="#ffffff"/>
+          <line x1="700" y1="392" x2="700" y2="430"/>
+          <line x1="700" y1="405" x2="680" y2="400"/>
+          <line x1="700" y1="405" x2="680" y2="415"/>
+          <line x1="700" y1="430" x2="690" y2="450"/>
+          <line x1="700" y1="430" x2="710" y2="450"/>
+          <text x="700" y="470" font-family="Courier New, monospace" font-size="9" text-anchor="middle" fill="#666">GENDARMERIE</text>
+        </g>
+
+        <text x="400" y="490" font-family="Courier New, monospace" font-size="12" letter-spacing="4" text-anchor="middle" fill="#666">THE WINDMILLS LAUGH</text>
+      </svg>
+    `,
+    body: `
+      <p>The civilian returned to the plain. This time he carried a second paper, stamped and dated.</p>
+      <p>— "This land is mine. This mill is mine. You use it without my consent. You endanger my life."</p>
+      <p>The windmills laughed. Their blades turned faster.</p>
+      <p class="dialogue">— "It's ours. You just live here."</p>
+      <p>The civilian pointed at the gendarmerie post at the edge of the field. The gendarmes were inside, reading reports about a scandal in the barracks. A real scandal. A scandal with names.</p>
+      <p class="dialogue">— "Look away. It's a scandal elsewhere. This is not the crime you're looking for."</p>
+      <p>And the blades kept turning. And the civilian kept bleeding. And the property he owned kept being used to hurt him.</p>
+      <p>The wind did not stop that day.</p>
+    `
   }
+];
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
