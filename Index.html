@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Periodyk — Komiks</title>
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f5f0;
+    --gray: #888;
+    --line: #222;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* NAGŁÓWEK */
+  header {
+    border-bottom: 3px solid var(--white);
+    padding: 40px 20px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  header h1 {
+    font-size: clamp(2rem, 8vw, 5rem);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: 900;
+    border: 3px solid var(--white);
+    display: inline-block;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+  }
+
+  header .issue {
+    font-size: 0.9rem;
+    letter-spacing: 0.4em;
+    color: var(--gray);
+    text-transform: uppercase;
+  }
+
+  header .issue span {
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+  }
+
+  /* NAWIGACJA */
+  nav {
+    border-bottom: 1px solid var(--line);
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background: var(--black);
+    z-index: 10;
+  }
+
+  nav a {
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: var(--white);
+  }
+
+  /* GŁÓWNA TREŚĆ */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+
+  /* KARTA ODCINKA */
+  .comic {
+    border: 2px solid var(--white);
+    margin-bottom: 80px;
+    padding: 30px;
+    position: relative;
+  }
+
+  .comic::before {
+    content: attr(data-episode);
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: var(--black);
+    padding: 0 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .comic h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+  }
+
+  .comic .meta {
+    font-size: 0.75rem;
+    color: var(--gray);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  .comic .panel {
+    width: 100%;
+    border: 2px solid var(--white);
+    margin: 20px 0;
+    display: block;
+    background: var(--white);
+    min-height: 200px;
+    object-fit: cover;
+  }
+
+  .comic p {
+    margin: 15px 0;
+    font-size: 1rem;
+  }
+
+  .comic .dialogue {
+    border-left: 4px solid var(--white);
+    padding-left: 15px;
+    font-style: italic;
+    color: var(--gray);
+    margin: 20px 0;
+  }
+
+  /* STOPKA */
+  footer {
+    border-top: 3px solid var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--gray);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  footer a {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray);
+  }
+
+  /* RESPONSYWNOŚĆ */
+  @media (max-width: 600px) {
+    header h1 {
+      letter-spacing: 0.15em;
+      padding: 10px 15px;
+    }
+    .comic {
+      padding: 20px;
+    }
+    nav a {
+      display: inline-block;
+      margin: 5px 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Periodyk</h1>
+  <p class="issue">Numer <span>001</span> — wydanie specjalne</p>
+</header>
+
+<nav>
+  <a href="#odcinek1">Odcinek 1</a>
+  <a href="#odcinek2">Odcinek 2</a>
+  <a href="#archiwum">Archiwum</a>
+  <a href="#o-mnie">O mnie</a>
+</nav>
+
+<main>
+
+  <article class="comic" id="odcinek1" data-episode="Odcinek 01">
+    <h2>Tytuł pierwszej historii</h2>
+    <p class="meta">Opublikowano: 24.09.2026</p>
+    <img src="panel1.jpg" alt="Pierwszy panel komiksu" class="panel">
+    <p>Tu wpisz opis lub narrację do swojego odcinka. Możesz dodać kilka akapitów tekstu.</p>
+    <p class="dialogue">— „Tu możesz wstawić kwestię dialogową bohatera."</p>
+    <img src="panel2.jpg" alt="Drugi panel komiksu" class="panel">
+    <p>Ciąg dalszy historii...</p>
+  </article>
+
+  <article class="comic" id="odcinek2" data-episode="Odcinek 02">
+    <h2>Tytuł drugiej historii</h2>
+    <p class="meta">Opublikowano: 01.10.2026</p>
+    <img src="panel3.jpg" alt="Panel komiksu" class="panel">
+    <p>Treść drugiego odcinka.</p>
+  </article>
+
+</main>
+
+<footer id="o-mnie">
+  <p>Periodyk — niezależne wydawnictwo komiksowe</p>
+  <p>© 2026 <a href="https://github.com/twoja-nazwa">twoja-nazwa</a></p>
+</footer>
+
+</body>
+</html>
